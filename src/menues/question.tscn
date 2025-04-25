@@ -1,0 +1,271 @@
+[gd_scene load_steps=7 format=3 uid="uid://nmog3njdumf8"]
+
+[ext_resource type="Script" uid="uid://cjixfwunkjrnq" path="res://src/menues/question.gd" id="1_4k7jp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkh37"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_rcuo5"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucsji"]
+font_size = 75
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pb7rc"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_y0lv0"]
+font_size = 32
+
+[node name="Question" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4k7jp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.172549, 0.215686, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Title" type="Label" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "BOTC Learner"
+label_settings = SubResource("LabelSettings_vkh37")
+horizontal_alignment = 1
+
+[node name="underTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "What is this role ?"
+label_settings = SubResource("LabelSettings_rcuo5")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+placeholder_text = "Enter the role name"
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+scroll_horizontal_custom_step = 0.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+
+[node name="ClueContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="PageCountLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="BackButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Back to menu"
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Submit Role"
+
+[node name="ResultsButton" type="Button" parent="VBoxContainer/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "End Session"
+
+[node name="Wrong" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Wrong"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.345098, 0.172549, 0.215686, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Wrong"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = -48.0
+offset_right = 93.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Wrong/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Wrong"
+label_settings = SubResource("LabelSettings_ucsji")
+
+[node name="Label2" type="Label" parent="Wrong/VBoxContainer"]
+layout_mode = 2
+text = "The correct answer was:
+"
+label_settings = SubResource("LabelSettings_pb7rc")
+horizontal_alignment = 1
+
+[node name="Correct" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Correct"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.345098, 0.215686, 1)
+
+[node name="Label" type="Label" parent="Correct"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -51.5
+offset_right = 134.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Correct"
+label_settings = SubResource("LabelSettings_ucsji")
+
+[node name="End" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="End"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.215686, 0.215686, 0.258824, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="End"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="End/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Title" type="Label" parent="End/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "BOTC Learner"
+label_settings = SubResource("LabelSettings_vkh37")
+horizontal_alignment = 1
+
+[node name="underTitle" type="Label" parent="End/VBoxContainer"]
+layout_mode = 2
+text = "Session End"
+label_settings = SubResource("LabelSettings_rcuo5")
+horizontal_alignment = 1
+
+[node name="Results" type="Label" parent="End/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+label_settings = SubResource("LabelSettings_y0lv0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="End/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="BackToMenu" type="Button" parent="End/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(175, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Back to Menu"
+
+[node name="ResultTimer" type="Timer" parent="."]
+one_shot = true

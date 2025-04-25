@@ -1,0 +1,386 @@
+[gd_scene load_steps=7 format=3 uid="uid://ouyvyavvqsk1"]
+
+[ext_resource type="Script" uid="uid://cubvca0xr15e6" path="res://src/main_folder/main.gd" id="1_rusvk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y0m3y"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_8yumr"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_jmtfk"]
+font_size = 23
+
+[sub_resource type="LabelSettings" id="LabelSettings_j2wb1"]
+font_size = 23
+
+[sub_resource type="LabelSettings" id="LabelSettings_a34v6"]
+font_color = Color(1, 0.172549, 0.215686, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rusvk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.172549, 0.215686, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "BOTC Learner"
+label_settings = SubResource("LabelSettings_y0m3y")
+horizontal_alignment = 1
+
+[node name="underTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Select Batch Options"
+label_settings = SubResource("LabelSettings_8yumr")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="HFlowContainer" type="HFlowContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 25
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="CharacterType" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType"]
+layout_mode = 2
+color = Color(0.156863, 0.156863, 0.196078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer"]
+layout_mode = 2
+
+[node name="CategoryTitle" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Character Type"
+label_settings = SubResource("LabelSettings_jmtfk")
+horizontal_alignment = 1
+
+[node name="Townsfolk" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Townsfolk"
+
+[node name="Outsiders" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Outsiders"
+
+[node name="Minions" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Minions"
+
+[node name="Demons" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Demons"
+
+[node name="Travellers" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Travellers"
+
+[node name="Fabled" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/CharacterType/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Fabled"
+
+[node name="Clues" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues"]
+layout_mode = 2
+color = Color(0.156863, 0.156863, 0.196078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer"]
+layout_mode = 2
+
+[node name="CategoryTitle" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Clues"
+label_settings = SubResource("LabelSettings_jmtfk")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Image" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Image"
+
+[node name="QuickSummary" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Quick Summary"
+
+[node name="Summary" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Summary"
+
+[node name="HowToRun" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "How To Run"
+
+[node name="Jinxes" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Jinxes"
+
+[node name="JinxesHard" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Jinxes (Hard)"
+
+[node name="JinxesImpossible" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Jinxes (Impossible)"
+
+[node name="Examples" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Examples"
+
+[node name="ExamplesHard" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Examples (Hard)"
+
+[node name="ExamplesImpossible" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Examples (Impossible)"
+
+[node name="TipsnTricks" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Tips & Tricks"
+
+[node name="TipsnTricksHard" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Tips & Tricks (Hard)"
+
+[node name="TipsnTricksImpossible" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Tips & Tricks (Impossible)"
+
+[node name="BluffingAs" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Bluffing as"
+
+[node name="BluffingAsHard" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Bluffing as (Hard)"
+
+[node name="BluffingAsImpossible" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Clues/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 17
+text = "Bluffing as (Impossible)"
+
+[node name="Modifiers" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers"]
+layout_mode = 2
+color = Color(0.156863, 0.156863, 0.196078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer"]
+layout_mode = 2
+
+[node name="CategoryTitle" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Modifiers"
+label_settings = SubResource("LabelSettings_jmtfk")
+horizontal_alignment = 1
+
+[node name="Half Letters" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Half Letters"
+
+[node name="Word Scramble" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Word Scramble"
+
+[node name="Half Words" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Half Words"
+
+[node name="Words Outlines" type="CheckBox" parent="VBoxContainer/MarginContainer/HFlowContainer/Modifiers/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 17
+text = "Words Outlines"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/MarginContainer/HFlowContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer/HFlowContainer/PanelContainer"]
+layout_mode = 2
+color = Color(0.156863, 0.156863, 0.196078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/HFlowContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/HFlowContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Maximum Roles :      "
+label_settings = SubResource("LabelSettings_j2wb1")
+horizontal_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/MarginContainer/HFlowContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+min_value = -1.0
+max_value = 10000.0
+value = -1.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="ErrorLabel" type="Label" parent="VBoxContainer/MarginContainer2/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "ERROR: "
+label_settings = SubResource("LabelSettings_a34v6")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Start"

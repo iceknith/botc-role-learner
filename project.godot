@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="botc-role-learner"
+config/version="1.1"
+run/main_scene="res://src/loaders/loading_game_menu.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="uid://dth6tm7r3gfxs"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=960
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
